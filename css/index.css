@@ -1,0 +1,206 @@
+.version.index /* version checker */
+{
+	color: #000018;
+	background-color: #4364EA;
+}
+
+.html
+{
+	background: #291E2E url("../images/dragonlore.jpg") repeat left top scroll;
+}
+
+#page
+{
+	z-index: 1;
+	width: 960px;
+	min-height: 500px;
+	background-image: none;
+	border-style: none;
+	border-color: #888163;
+	background-color: #3A364B;
+	background-color: rgba(21,16,41,0.84);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#page::before
+{
+	content: "";
+	position: absolute;
+	pointer-events: none;
+	box-shadow: inset 0px 0px 67px rgba(217,224,33,0.26), inset 0px 0px 67px rgba(217,224,33,0.26);
+	top: 36px;
+	bottom: 36px;
+	width: 960px;
+}
+
+#page_position_content
+{
+	padding-top: 20px;
+	padding-bottom: 426px;
+	width: 0.01px;
+}
+
+#menuu134
+{
+	z-index: 2;
+	width: 916px;
+	margin-left: 20px;
+}
+
+#u135
+{
+	width: 227px;
+	min-height: 54px;
+	margin-right: -10000px;
+}
+
+#u138
+{
+	width: 227px;
+	padding-bottom: 18px;
+}
+
+#u138:hover
+{
+	width: 227px;
+	min-height: 0px;
+	margin: 0px;
+}
+
+#u138:active
+{
+	width: 227px;
+	min-height: 0px;
+	margin: 0px;
+}
+
+#u189
+{
+	width: 227px;
+	min-height: 54px;
+	margin-right: -10000px;
+	left: 229px;
+}
+
+#u190
+{
+	width: 227px;
+	padding-bottom: 18px;
+}
+
+#u138.MuseMenuActive,#u190:hover
+{
+	width: 227px;
+	min-height: 0px;
+	margin: 0px;
+}
+
+#u190:active
+{
+	width: 227px;
+	min-height: 0px;
+	margin: 0px;
+}
+
+#u190.MuseMenuActive
+{
+	width: 227px;
+	min-height: 0px;
+	margin: 0px;
+}
+
+#u141-4_clip,#u192-4_clip
+{
+	width: 227px;
+	height: 36px;
+}
+
+#u149
+{
+	width: 228px;
+	min-height: 54px;
+	margin-right: -10000px;
+	left: 458px;
+}
+
+#u150
+{
+	width: 228px;
+	padding-bottom: 18px;
+}
+
+#u150:hover
+{
+	width: 228px;
+	min-height: 0px;
+	margin: 0px;
+}
+
+#u150:active
+{
+	width: 228px;
+	min-height: 0px;
+	margin: 0px;
+}
+
+#u169
+{
+	width: 228px;
+	min-height: 54px;
+	margin-right: -10000px;
+	left: 688px;
+}
+
+#u170
+{
+	width: 228px;
+	padding-bottom: 18px;
+}
+
+#u150.MuseMenuActive,#u170:hover
+{
+	width: 228px;
+	min-height: 0px;
+	margin: 0px;
+}
+
+#u170:active
+{
+	width: 228px;
+	min-height: 0px;
+	margin: 0px;
+}
+
+#u170.MuseMenuActive
+{
+	width: 228px;
+	min-height: 0px;
+	margin: 0px;
+}
+
+#u152-4_clip,#u172-4_clip
+{
+	width: 228px;
+	height: 36px;
+}
+
+#u141-4,#u192-4,#u152-4,#u172-4
+{
+	margin-right: -10000px;
+	top: 9px;
+}
+
+body
+{
+	position: relative;
+	min-width: 960px;
+	padding-top: 36px;
+	padding-bottom: 36px;
+}
+
+#page .verticalspacer
+{
+	clear: both;
+}
+
