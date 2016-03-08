@@ -1,3 +1,55 @@
+<?php
+include "php/apikey.php";
+include "php/OpenId.php";
+
+$OpenID= new LightOpenID("rootcorp.ddns.net");
+$login = "";
+
+session_start();
+
+if(!$OpenID->mode)
+{
+	if(isset($_GET['login']))
+	{
+		$OpenID->identity = "http://steamcommunity.com/openid";
+		header("Location: ".$OpenID->authUrl());
+	}
+	if (!isset($_SESSION['T2SteamAuth']))
+	{
+		$login = "<div id='login'>Sign in through Steam<a href='?login'><img src='http://steamcommunity-a.akamaihd.net/public/images/signinthroughsteam/sits_large_noborder.png'></a> to 'Website Action'.</div>";
+	}
+}
+elseif($OpenID->mode == "cancel") {
+	echo "You have canceled an authentication";
+} else {
+	if (!isset($_SESSION['T2SteamAuth']))
+	{
+		$_SESSION['T2SteamAuth'] = $OpenID->validate() ? $OpenID->identity : null;
+		$_SESSION['T2SteamID64'] = str_replace("http://steamcommunity.com/openid/id/","",$_SESSION['T2SteamAuth']);
+
+		if($_SESSION['T2SteamAuth'] !== null)
+		{
+			$Steam64 = str_replace("http://steamcommunity.com/openid/id/","",$_SESSION['T2SteamAuth']);
+			$profile = file_get_contents("http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v002/?key=".$api."&steamids=".$Steam64);
+			$buffer = fopen("cache/".$Steam64.".json","w+");
+			fwrite($buffer, $profile);
+			fclose($buffer);
+		}
+		header("Location: registration.php");
+	}
+}
+if(isset($_SESSION['T2SteamAuth']))
+{
+	$steam = json_decode(file_get_contents("cache/".$_SESSION['T2SteamID64'].".json"));
+	$login = "<div id='login'><a href='?logout'>Logout</a></div>";
+}
+if(isset($_GET['logout']))
+{
+	unset($_SESSION['T2SteamAuth']);
+	unset($_SESSION['T2SteamID64']);
+	header("Location: registration.php");
+}
+?>
 <!DOCTYPE html>
 <html class="html" lang="ru-RU">
  <head>
@@ -16,66 +68,15 @@
   <!-- Other scripts -->
   <script type="text/javascript">
    document.documentElement.className += ' js';
-</script>
+  </script>
   <!-- JS includes -->
-  <!--[if lt IE 9]>
-  <script src="javascript/html5shiv.js?4241844378" type="text/javascript"></script>
-  <![endif]-->
-   </head>
- <body>
- <?php
-include "apikey.php";
-include "OpenId.php";
-
-$OpenID= new LightOpenID("localhost");
-$login = "";
-
-session_start();
-
-if(!$OpenID->mode)
-{
-    if(isset($_GET['login']))
-    {
-        $OpenID->identity = "http://steamcommunity.com/openid";
-        header("Location: ".$OpenID->authUrl());
-    }
-    if (!isset($_SESSION['T2SteamAuth']))
-    {
-        $login = "<div id='login'>Sign in through Steam<a href='?login'><img src='http://steamcommunity-a.akamaihd.net/public/images/signinthroughsteam/sits_large_noborder.png'></a> to 'Website Action'.</div>";
-    }
+  </head>
+<body>
+<?php
+if(isset($_SESSION['T2SteamAuth'])){
+	echo "<img src='".$steam->response->players[0]->avatarfull."'>";
 }
-elseif($OpenID->mode == "cancel") {
-    echo "You have canceled an authentication";
-} else {
-    if (!isset($_SESSION['T2SteamAuth']))
-    {
-        $_SESSION['T2SteamAuth'] = $OpenID->validate() ? $OpenID->identity : null;
-        $_SESSION['T2SteamID64'] = str_replace("http://steamcommunity.com/openid/id/","",$_SESSION['T2SteamAuth']);
-
-        if($_SESSION['T2SteamAuth'] !== null)
-        {
-            $Steam64 = str_replace("http://steamcommunity.com/openid/id/","",$_SESSION['T2SteamAuth']);
-            $profile = file_get_contents("http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v002/?key=".$api."&steamids=".$Steam64);
-            $buffer = fopen("cache/".$Steam64.".json","w+");
-            fwrite($buffer, $profile);
-            fclose($buffer);
-        }
-        header("Location: index.php");
-    }
-}
-if(isset($_SESSION['T2SteamAuth']))
-{
-    $login = "<div id='login'><a href='?logout'></div>";
-}
-if(isset($_GET['logout']))
-{
-    unset($_SESSION['T2SteamAuth']);
-    unset($_SESSION['T2SteamID64']);
-    header("Location: index.php");
-}
-$steam = json_decode(file_get_contents("cache/{$_SESSION['T2SteamID64']}.json"));
-echo $login;
-echo "<img src='".$steam->response->players[0]->avatarfull."'>";
+echo "<br>".$login."<br>";
 ?>
   <div class="shadow rgba-background clearfix" id="page"><!-- column -->
    <div class="position_content" id="page_position_content">
@@ -87,7 +88,7 @@ echo "<img src='".$steam->response->players[0]->avatarfull."'>";
       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u394" href="products.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap grpelem" id="u396-4"><!-- rasterized frame --><div id="u396-4_clip"><img id="u396-4_img" alt="PRODUCTS" width="227" height="36" src="images/products4.png"/></div></div></a>
      </div>
      <div class="MenuItemContainer clearfix grpelem" id="u386"><!-- vertical box -->
-      <a class="nonblock nontext MenuItem MenuItemWithSubMenu MuseMenuActive clearfix colelem" id="u387" href="registration.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap grpelem" id="u390-4"><!-- rasterized frame --><div id="u390-4_clip"><img id="u390-4_img" alt="REGISTRATION" width="228" height="36" src="images/registration4.png"/></div></div></a>
+      <a class="nonblock nontext MenuItem MenuItemWithSubMenu MuseMenuActive clearfix colelem" id="u387" href="registration.php"><!-- horizontal box --><div class="MenuItemLabel NoWrap grpelem" id="u390-4"><!-- rasterized frame --><div id="u390-4_clip"><img id="u390-4_img" alt="REGISTRATION" width="228" height="36" src="images/registration4.png"/></div></div></a>
      </div>
      <div class="MenuItemContainer clearfix grpelem" id="u372"><!-- vertical box -->
       <a class="nonblock nontext MenuItem MenuItemWithSubMenu clearfix colelem" id="u373" href="about-us.html"><!-- horizontal box --><div class="MenuItemLabel NoWrap grpelem" id="u376-4"><!-- rasterized frame --><div id="u376-4_clip"><img id="u255-4_img" alt="ABOUT US" width="228" height="36" src="images/aboutus4.png"/></div></div></a>
