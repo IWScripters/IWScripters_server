@@ -1,0 +1,78 @@
+.version.registration /* version checker */
+{
+	color: #000005;
+	background-color: #C68CFE;
+}
+
+#muse_css_mq
+{
+	background-color: #FFFFFF;
+}
+
+#page
+{
+	z-index: 1;
+	width: 380px;
+	min-height: 570px;
+	background-image: none;
+	border-width: 0px;
+	border-color: #888163;
+	background-color: #3A364B;
+	background-color: rgba(21,16,41,0.84);
+}
+
+#page::before
+{
+	content: "";
+	position: absolute;
+	pointer-events: none;
+	box-shadow: inset 0px 0px 67px rgba(61,168,20,0.26), inset 0px 0px 67px rgba(61,168,20,0.26);
+	top: 0px;
+	bottom: 0px;
+	width: 380px;
+}
+
+#page_position_content
+{
+	padding-top: 71px;
+	padding-bottom: 499px;
+	width: 0.01px;/* should not cover content below */
+}
+
+.html
+{
+	background: #291E2E url("../../images/comment_vowa1m3z2kkutosq1rcmzucrywi31g4b.jpg") no-repeat center center scroll;
+	background-size: cover;
+}
+
+body
+{
+	position: relative;
+	min-width: 380px;
+}
+
+@-ms-viewport
+{
+	width: 380px;
+}
+
+@-webkit-viewport
+{
+	width: 380px;
+}
+
+@-o-viewport
+{
+	width: 380px;
+}
+
+@-moz-viewport
+{
+	width: 380px;
+}
+
+@viewport
+{
+	width: 380px;
+}
+

@@ -1,0 +1,188 @@
+.version.about_us /* version checker */
+{
+	color: #000001;
+	background-color: #DD2F75;
+}
+
+#muse_css_mq
+{
+	background-color: #FFFFFF;
+}
+
+#page
+{
+	z-index: 1;
+	width: 960px;
+	min-height: 949px;
+	background-image: none;
+	border-width: 0px;
+	border-color: #888163;
+	background-color: #D0CAC5;
+	background-color: rgba(82,60,43,0.27);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#page::before
+{
+	content: "";
+	position: absolute;
+	pointer-events: none;
+	box-shadow: inset 0px 0px 67px rgba(205,122,73,0.26), inset 0px 0px 67px rgba(205,122,73,0.26);
+	top: 0px;
+	bottom: 114px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+}
+
+#page_position_content
+{
+	padding-top: 11px;
+	padding-bottom: 872px;
+	width: 0.01px;/* should not cover content below */
+}
+
+#menuu306
+{
+	z-index: 2;
+	width: 920px;
+	margin-left: 20px;
+	position: relative;
+}
+
+#u314
+{
+	width: 228px;
+	min-height: 66px;
+	position: relative;
+	margin-right: -10000px;
+}
+
+#u315
+{
+	width: 228px;
+	padding-bottom: 30px;
+	position: relative;
+}
+
+#u315:hover
+{
+	width: 228px;
+	min-height: 0px;
+	margin: 0px;
+}
+
+#u328
+{
+	width: 228px;
+	min-height: 66px;
+	position: relative;
+	margin-right: -10000px;
+	left: 230px;
+}
+
+#u329
+{
+	width: 228px;
+	padding-bottom: 30px;
+	position: relative;
+}
+
+#u315.MuseMenuActive,#u329:hover
+{
+	width: 228px;
+	min-height: 0px;
+	margin: 0px;
+}
+
+#u329.MuseMenuActive
+{
+	width: 228px;
+	min-height: 0px;
+	margin: 0px;
+}
+
+#u316,#u331
+{
+	height: 36px;
+	width: 228px;
+	position: relative;
+	margin-right: -10000px;
+	top: 15px;
+}
+
+#u321
+{
+	width: 229px;
+	min-height: 66px;
+	position: relative;
+	margin-right: -10000px;
+	left: 460px;
+}
+
+#u322
+{
+	width: 229px;
+	padding-bottom: 30px;
+	position: relative;
+}
+
+#u322:hover
+{
+	width: 229px;
+	min-height: 0px;
+	margin: 0px;
+}
+
+#u307
+{
+	width: 229px;
+	min-height: 66px;
+	position: relative;
+	margin-right: -10000px;
+	left: 691px;
+}
+
+#u308
+{
+	width: 229px;
+	padding-bottom: 30px;
+	position: relative;
+}
+
+#u322.MuseMenuActive,#u308:hover
+{
+	width: 229px;
+	min-height: 0px;
+	margin: 0px;
+}
+
+#u308.MuseMenuActive
+{
+	width: 229px;
+	min-height: 0px;
+	margin: 0px;
+}
+
+#u325,#u311
+{
+	height: 36px;
+	width: 229px;
+	position: relative;
+	margin-right: -10000px;
+	top: 15px;
+}
+
+.html
+{
+	background: #291E2E url("../images/shturmovaya-vintovka-oruzhie-cs-5452.jpg") repeat center center scroll;
+}
+
+body
+{
+	position: relative;
+	min-width: 960px;
+	padding-bottom: 114px;
+}
+

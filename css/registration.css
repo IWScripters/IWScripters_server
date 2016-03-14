@@ -1,0 +1,189 @@
+.version.registration /* version checker */
+{
+	color: #0000F4;
+	background-color: #5C2940;
+}
+
+#muse_css_mq
+{
+	background-color: #FFFFFF;
+}
+
+#page
+{
+	z-index: 1;
+	width: 960px;
+	min-height: 1000px;
+	background-image: none;
+	border-width: 0px;
+	border-color: #888163;
+	background-color: #F5E4ED;
+	background-color: rgba(178,36,105,0.12);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#page::before
+{
+	content: "";
+	position: absolute;
+	pointer-events: none;
+	box-shadow: inset 0px 0px 67px rgba(179,0,68,0.47), inset 0px 0px 67px rgba(179,0,68,0.47);
+	top: 10px;
+	bottom: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+}
+
+#page_position_content
+{
+	padding-top: 10px;
+	padding-bottom: 926px;
+	width: 0.01px;/* should not cover content below */
+}
+
+#menuu371
+{
+	z-index: 2;
+	width: 920px;
+	margin-left: 20px;
+	position: relative;
+}
+
+#u379
+{
+	width: 228px;
+	min-height: 64px;
+	position: relative;
+	margin-right: -10000px;
+}
+
+#u380
+{
+	width: 228px;
+	padding-bottom: 28px;
+	position: relative;
+}
+
+#u380:hover
+{
+	width: 228px;
+	min-height: 0px;
+	margin: 0px;
+}
+
+#u393
+{
+	width: 228px;
+	min-height: 64px;
+	position: relative;
+	margin-right: -10000px;
+	left: 230px;
+}
+
+#u394
+{
+	width: 228px;
+	padding-bottom: 28px;
+	position: relative;
+}
+
+#u380.MuseMenuActive,#u394:hover
+{
+	width: 228px;
+	min-height: 0px;
+	margin: 0px;
+}
+
+#u394.MuseMenuActive
+{
+	width: 228px;
+	min-height: 0px;
+	margin: 0px;
+}
+
+#u381,#u396
+{
+	height: 36px;
+	width: 228px;
+	position: relative;
+	margin-right: -10000px;
+	top: 14px;
+}
+
+#u386
+{
+	width: 229px;
+	min-height: 64px;
+	position: relative;
+	margin-right: -10000px;
+	left: 460px;
+}
+
+#u387
+{
+	width: 229px;
+	padding-bottom: 28px;
+	position: relative;
+}
+
+#u387:hover
+{
+	width: 229px;
+	min-height: 0px;
+	margin: 0px;
+}
+
+#u372
+{
+	width: 229px;
+	min-height: 64px;
+	position: relative;
+	margin-right: -10000px;
+	left: 691px;
+}
+
+#u373
+{
+	width: 229px;
+	padding-bottom: 28px;
+	position: relative;
+}
+
+#u387.MuseMenuActive,#u373:hover
+{
+	width: 229px;
+	min-height: 0px;
+	margin: 0px;
+}
+
+#u373.MuseMenuActive
+{
+	width: 229px;
+	min-height: 0px;
+	margin: 0px;
+}
+
+#u390,#u376
+{
+	height: 36px;
+	width: 229px;
+	position: relative;
+	margin-right: -10000px;
+	top: 14px;
+}
+
+.php
+{
+	background: #291E2E url("../images/water.jpg") repeat center center scroll;
+}
+
+body
+{
+	position: relative;
+	min-width: 960px;
+	padding-top: 10px;
+	padding-bottom: 50px;
+}
+

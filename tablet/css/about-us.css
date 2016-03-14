@@ -1,0 +1,77 @@
+.version.about_us /* version checker */
+{
+	color: #000002;
+	background-color: #300836;
+}
+
+#muse_css_mq
+{
+	background-color: #FFFFFF;
+}
+
+#page
+{
+	z-index: 1;
+	width: 768px;
+	min-height: 1024px;
+	background-image: none;
+	border-width: 0px;
+	border-color: #888163;
+	background-color: #3A364B;
+	background-color: rgba(21,16,41,0.84);
+}
+
+#page::before
+{
+	content: "";
+	position: absolute;
+	pointer-events: none;
+	box-shadow: inset 0px 0px 67px rgba(205,122,73,0.26), inset 0px 0px 67px rgba(205,122,73,0.26);
+	top: 0px;
+	bottom: 0px;
+	width: 768px;
+}
+
+#page_position_content
+{
+	padding-top: 128px;
+	padding-bottom: 896px;
+	width: 0.01px;/* should not cover content below */
+}
+
+.html
+{
+	background: #291E2E url("../../images/shturmovaya-vintovka-oruzhie-cs-5452.jpg") repeat-y center center scroll;
+}
+
+body
+{
+	position: relative;
+	min-width: 768px;
+}
+
+@-ms-viewport
+{
+	width: 768px;
+}
+
+@-webkit-viewport
+{
+	width: 768px;
+}
+
+@-o-viewport
+{
+	width: 768px;
+}
+
+@-moz-viewport
+{
+	width: 768px;
+}
+
+@viewport
+{
+	width: 768px;
+}
+

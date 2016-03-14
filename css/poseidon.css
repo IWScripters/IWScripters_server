@@ -1,0 +1,288 @@
+.version.poseidon /* version checker */
+{
+	color: #000008;
+	background-color: #D351AA;
+}
+
+#muse_css_mq
+{
+	background-color: #FFFFFF;
+}
+
+#page
+{
+	z-index: 1;
+	width: 960px;
+	min-height: 1000px;
+	background-image: none;
+	border-width: 0px;
+	border-color: #888163;
+	background-color: #BCC3B9;
+	background-color: rgba(25,49,16,0.29);
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#page::before
+{
+	content: "";
+	position: absolute;
+	pointer-events: none;
+	box-shadow: inset 0px 0px 67px rgba(60,98,20,0.26), inset 0px 0px 67px rgba(60,98,20,0.26);
+	top: 0px;
+	bottom: 50px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 960px;
+}
+
+#page_position_content
+{
+	padding-top: 10px;
+	padding-bottom: 499px;
+	width: 0.01px;/* should not cover content below */
+}
+
+#menuu242
+{
+	z-index: 2;
+	width: 920px;
+	margin-left: 20px;
+	position: relative;
+}
+
+#u257
+{
+	width: 228px;
+	min-height: 64px;
+	position: relative;
+	margin-right: -10000px;
+}
+
+#u260
+{
+	width: 228px;
+	padding-bottom: 28px;
+	position: relative;
+}
+
+#u260:hover
+{
+	width: 228px;
+	min-height: 0px;
+	margin: 0px;
+}
+
+#u260:active
+{
+	width: 228px;
+	min-height: 0px;
+	margin: 0px;
+}
+
+#u264
+{
+	width: 228px;
+	min-height: 64px;
+	position: relative;
+	margin-right: -10000px;
+	left: 230px;
+}
+
+#u267
+{
+	width: 228px;
+	padding-bottom: 28px;
+	position: relative;
+}
+
+#u260.MuseMenuActive,#u267:hover
+{
+	width: 228px;
+	min-height: 0px;
+	margin: 0px;
+}
+
+#u267:active
+{
+	width: 228px;
+	min-height: 0px;
+	margin: 0px;
+}
+
+#u267.MuseMenuActive
+{
+	width: 228px;
+	min-height: 0px;
+	margin: 0px;
+}
+
+#u261-4_clip,#u268-4_clip
+{
+	width: 228px;
+	height: 36px;
+}
+
+#u243
+{
+	width: 229px;
+	min-height: 64px;
+	position: relative;
+	margin-right: -10000px;
+	left: 460px;
+}
+
+#u244
+{
+	width: 229px;
+	padding-bottom: 28px;
+	position: relative;
+}
+
+#u244:hover
+{
+	width: 229px;
+	min-height: 0px;
+	margin: 0px;
+}
+
+#u244:active
+{
+	width: 229px;
+	min-height: 0px;
+	margin: 0px;
+}
+
+#u250
+{
+	width: 229px;
+	min-height: 64px;
+	position: relative;
+	margin-right: -10000px;
+	left: 691px;
+}
+
+#u253
+{
+	width: 229px;
+	padding-bottom: 28px;
+	position: relative;
+}
+
+#u244.MuseMenuActive,#u253:hover
+{
+	width: 229px;
+	min-height: 0px;
+	margin: 0px;
+}
+
+#u253:active
+{
+	width: 229px;
+	min-height: 0px;
+	margin: 0px;
+}
+
+#u253.MuseMenuActive
+{
+	width: 229px;
+	min-height: 0px;
+	margin: 0px;
+}
+
+#u245-4_clip,#u255-4_clip
+{
+	width: 229px;
+	height: 36px;
+}
+
+#u261-4,#u268-4,#u245-4,#u255-4
+{
+	position: relative;
+	margin-right: -10000px;
+	top: 14px;
+}
+
+#u2386-6
+{
+	z-index: 29;
+	width: 239px;
+	min-height: 69px;
+	background-color: #006100;
+	opacity: 0.5;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	filter: alpha(opacity=50);
+	border-radius: 35px;
+	text-align: center;
+	margin-left: 598px;
+	margin-top: 27px;
+	position: relative;
+}
+
+#u2386-6:hover
+{
+	opacity: 1;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	padding-top: 0px;
+	padding-bottom: 0px;
+	min-height: 69px;
+	width: 239px;
+	margin: 27px 0px 0px 598px;
+}
+
+#u2386-3
+{
+	font-size: 24px;
+	line-height: 29px;
+	padding-left: 5px;
+	padding-top: 5px;
+	color: #97F855;
+	font-family: black-ops-one, sans-serif;
+	font-weight: 400;
+}
+
+#u2379
+{
+	z-index: 27;
+	width: 404px;
+	-pie-box-shadow: none;
+	box-shadow: 0px 0px 8px rgba(21,39,79,0.86),0px 0px 8px rgba(21,39,79,0.86);
+	border-style: solid;
+	border-width: 1px;
+	border-color: #16264F;
+	background-color: transparent;
+	border-radius: 35px;
+	margin-left: 49px;
+	top: -75px;
+	margin-bottom: -75px;
+	position: relative;
+}
+
+#u2379:hover
+{
+	-pie-box-shadow: none;
+	box-shadow: 0px 0px 8px rgba(32,38,47,0.86),0px 0px 8px rgba(32,38,47,0.86);
+	border-color: #222931;
+	width: 404px;
+	min-height: 0px;
+	margin: 0px 0px -75px 49px;
+}
+
+#u2379 .clip_frame
+{
+	-webkit-border-radius: 34px 34px 34px 34px;
+}
+
+.html
+{
+	background: #006837 url("../images/ak47.jpg") repeat center center;
+}
+
+body
+{
+	position: relative;
+	min-width: 960px;
+	padding-bottom: 50px;
+}
+
