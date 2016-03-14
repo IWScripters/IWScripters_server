@@ -102,12 +102,12 @@ if(isset($_GET['logout']))
    <img class="preload" src="images/u390-a.png" alt=""/>
    <img class="preload" src="images/u376-a.png" alt=""/>
   </div>
-     <?php
-if(isset($_SESSION['T2SteamAuth'])){
-	echo "<img src='".$steam->response->players[0]->avatarfull."'>";
-}
-echo "<br>".$login."<br>";
-?>
+  <?php
+  if(isset($_SESSION['T2SteamAuth'])){
+	  echo "<img src='".$steam->response->players[0]->avatarfull."'>";
+  }
+  echo "<br>".$login."<br>";
+  ?>
   <!-- JS includes -->
   <script type="text/javascript">
    if (document.location.protocol != 'https:') document.write('\x3Cscript src="http://musecdn.businesscatalyst.com/scripts/4.0/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
