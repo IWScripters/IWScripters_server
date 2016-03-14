@@ -174,9 +174,9 @@
 	top: 14px;
 }
 
-.php
+.html
 {
-	background: #291E2E url("../images/water.jpg") repeat center center scroll;
+	background: #291E2E url("/images/water.jpg") repeat center center scroll;
 }
 
 body
