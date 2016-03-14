@@ -94,7 +94,7 @@
     </folder>
     <file name="index.html" crc="3862116521" seo="true" mt="1457964956399" redirect="false"/>
     <file name="products.html" crc="45616076" seo="true" mt="1457964956336" redirect="false"/>
-    <file name="registration.html" crc="4060615832" seo="true" mt="1457964956399" redirect="false"/>
+    <file name="registration.php" crc="4060615832" seo="true" mt="1457964956399" redirect="false"/>
     <file name="about-us.html" crc="38344777" seo="true" mt="1457964956430" redirect="false"/>
   </folder>
   <folder name="phone">
@@ -106,11 +106,11 @@
     </folder>
     <file name="index.html" crc="188403649" seo="true" mt="1457964956399" redirect="false"/>
     <file name="products.html" crc="4178714548" seo="true" mt="1457964956399" redirect="false"/>
-    <file name="registration.html" crc="332401508" seo="true" mt="1457964956399" redirect="false"/>
+    <file name="registration.php" crc="332401508" seo="true" mt="1457964956399" redirect="false"/>
     <file name="about-us.html" crc="4115807657" seo="true" mt="1457964956446" redirect="false"/>
   </folder>
   <file name="index.html" crc="3815119951" seo="true" mt="1457965821364" redirect="true"/>
-  <file name="registration.html" crc="3782229602" seo="true" mt="1457966385499" redirect="true"/>
+  <file name="registration.php" crc="3782229602" seo="true" mt="1457966385499" redirect="true"/>
   <file name="about-us.html" crc="3943228590" seo="true" mt="1457965841541" redirect="true"/>
   <file name="products.html" crc="311703069" seo="true" mt="1457966550934" redirect="true"/>
   <file name="case-hardened.html" crc="68045857" seo="true" mt="1457970092505" redirect="true"/>
