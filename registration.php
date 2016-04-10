@@ -1,10 +1,12 @@
 <?php
 include "php/apikey.php";
 include "php/OpenId.php";
+include "Requests-1.6.0/library/Requests.php";
 
 $OpenID= new LightOpenID("rootcorp.ddns.net");
 $login = "";
 
+Requests::register_autoloader();
 session_start();
 
 if(!$OpenID->mode)
@@ -16,7 +18,7 @@ if(!$OpenID->mode)
 	}
 	if (!isset($_SESSION['T2SteamAuth']))
 	{
-		$login = "<div id='login'>Sign in through Steam<a href='?login'><img src='http://steamcommunity-a.akamaihd.net/public/images/signinthroughsteam/sits_large_noborder.png'></a> to 'Website Action'.</div>";
+		$login = "<div id='login'><a href='?login'><img src='http://steamcommunity-a.akamaihd.net/public/images/signinthroughsteam/sits_large_noborder.png'></a></div>";
 	}
 }
 elseif($OpenID->mode == "cancel") {
@@ -40,6 +42,8 @@ elseif($OpenID->mode == "cancel") {
 }
 if(isset($_SESSION['T2SteamAuth']))
 {
+    $response =
+
 	$steam = json_decode(file_get_contents("cache/".$_SESSION['T2SteamID64'].".json"));
 	$login = "<div id='login'><a href='?logout'>Logout</a></div>";
 }
@@ -78,7 +82,13 @@ if(isset($_GET['logout']))
  <body>
 
   <div class="shadow rgba-background clearfix" id="page"><!-- column -->
-   <div class="position_content" id="page_position_content">
+      <?php
+      if(isset($_SESSION['T2SteamAuth'])){
+          echo "<img src='".$steam->response->players[0]->avatarfull."'>";
+      }
+      echo "<br>".$login."<br>";
+      ?>
+      <div class="position_content" id="page_position_content">
     <nav class="MenuBar clearfix colelem" id="menuu371"><!-- horizontal box -->
      <div class="MenuItemContainer clearfix grpelem" id="u379"><!-- vertical box -->
       <a class="nonblock nontext MenuItem MenuItemWithSubMenu rounded-corners clearfix colelem" id="u380" href="index.html"><!-- horizontal box --><img class="MenuItemLabel NoWrap grpelem" id="u381" alt="HOMEPAGE" src="images/blank.gif"/><!-- state-based BG images --></a>
@@ -102,12 +112,6 @@ if(isset($_GET['logout']))
    <img class="preload" src="images/u390-a.png" alt=""/>
    <img class="preload" src="images/u376-a.png" alt=""/>
   </div>
-  <?php
-  if(isset($_SESSION['T2SteamAuth'])){
-	  echo "<img src='".$steam->response->players[0]->avatarfull."'>";
-  }
-  echo "<br>".$login."<br>";
-  ?>
   <!-- JS includes -->
   <script type="text/javascript">
    if (document.location.protocol != 'https:') document.write('\x3Cscript src="http://musecdn.businesscatalyst.com/scripts/4.0/jquery-1.8.3.min.js" type="text/javascript">\x3C/script>');
